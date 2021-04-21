@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Insurance Wizard</title>
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--bootsrap rtl-->
+<link href="css/bootstrap-rtl.css" rel="stylesheet" type="text/css">
+<!--FontAwesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="main-navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-8 padding-0">
+					<ul class="top">
+						<li>
+						<a href="#">
+						ביטוח
+						</a>
+						</li>
+						
+						<li>
+						<a href="#">
+						פנסיה
+						</a>
+						</li>
+						
+						<li>
+						<a href="#">
+						קרן נאמנות
+						</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-4 padding-0">
+					<p>LOGO IS HERE</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container">
+	<form id="regForm" action="#">
+		<div class="top-header-2">
+			<h1 class="up-title">
+			הצטרפות לקופות
+			<span class="visible-xs visible-sm">
+			</br>
+			</span>
+			<span class="mobile-word-2">
+			גמל
+			</span>
+			</h1></p>
+		</div>
+		
+		<div class="navigation bg-white row">
+			<div class="step">
+				<div class="first dot">
+					<p>
+					1
+					</p>
+				</div>
+				<p class="step-title">מידע כללי</p>
+			</div>
+
+			<div class="step">
+				<div class="second dot">
+					<p>
+					2
+					</p>
+				</div>
+				<p class="step-title">פרטי בעל החיסכון</p>
+			</div>
+
+			<div class="step">
+				<div class="third dot">
+					<p>
+					3
+					</p>
+				</div>
+			<p class="step-title">אישור וסיכום</p>
+			</div>
+		</div>
+
+		<div class="tab">
+			<div class="row">
+				<div class="col-md-3 col-sm-12 col-xs-12 right-side">
+					<div class="pull-right">
+						<p class="sub-title">
+						בחירת מסלול ההשקעה
+					</div>
+				<div class="pull-left visible-xs visible-sm" onclick="hideShow()">
+					<i class="fa fa-angle-up angel-up-white"></i>
+				</div>
+				</div>
+
+				<div class="col-md-9 col-sm-12 col-xs-12 padding-0">
+					<div class="col-xs-12 border-bottom hidden-xs hidden-sm bg-white desktop-arrow">
+						<div class="pull-right">
+						<p class="desktop-title">
+						באפשרותך לבחור את המסלול שבו יושקע הכסף שלך, על פי צרכייך ומידת הסיכון המתאימה לך
+						</p>
+						</div>
+						<div class="pull-left" onclick="hideShow()">
+						<i class="fa fa-angle-up"></i>
+						</div>
+					</div>
+					
+				<div id="section1">
+				<div class="col-xs-12 padding-10 margin-top-10"> 
+					<label class="checkbox-container">
+					אני מעוניין לפצל את החיסכון שלי בין המסלולים השונים (תוכל לבצע פעולה זו בהמשך התהליך)
+					<input type="checkbox" checked="checked">
+					<span class="checkmark"></span>
+					</label>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<p>
+						<p>
+							<label for="select1" class="color">מסלול השקעה לבחירתך</label>
+						</p>
+					<div class="custom-select">
+						<select name="select1" class="form-control">
+							<option value="0">מסלול כללי- 3.07% כללי</option>
+							<option value="1">מסלול בינוני- 6.7%</option>
+							<option value="2">מסלול מתקדם- 12% ומעלה</option>
+						</select>
+					</div>
+					</p>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<p>	
+						<p>
+							<label for="fname" class="color">שם פרטי
+							<span class="required"><i class="fa fa-asterisk"></i></span>
+							</label>
+						</p>
+					<input name="fname" class="form-control"> 
+					</p>
+				<p>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12 last margin-bottom-20">
+					<p>
+					<label for="lname" class="color">שם משפחה
+					<span class="required"><i class="fa fa-asterisk"></i></span>
+					</label>
+					</p>
+				<input name="lname" class="form-control"> 
+				</p>
+				</div>
+
+				<div class="col-xs-12 border-bottom margin-auto"> 
+				<p>
+					<label class="color">עבור מי הפוליסה?</label>
+				</p>
+					<label class="radio-container">עבורי
+						<input type="radio" checked="checked" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<label class="radio-container">עבור אדם אחר
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+
+				<div class="col-xs-12 margin-auto">
+					<p class="bottom-title">
+					למידע נוסף על מסלולי ההשקעה 
+						<i class="fa fa-angle-left"></i>
+					</p>
+				</div> 
+				</div>	
+				
+				</div>
+			</div>
+		</div>
+	
+	<div class="tab">
+		<div class="row bg-white">
+			<div class="col-md-3 col-sm-12 col-xs-12 right-side">
+			<p class="sub-title">
+			פרטי בעל החיסכון
+			</h2>
+			</div>
+
+			<div class="col-md-9 col-sm-12 col-xs-12 padding-0">
+			
+				<div class="col-xs-12 border-bottom bg-white hidden-xs hidden-sm">
+					<div class="pull-right">
+					<p class="desktop-title">
+						אנא מלא פרטים אישיים להמשך התהליך:
+						</p>
+					</div>
+				</div>
+				
+				
+		
+			<div class="col-md-6 col-sm-12 col-xs-12 margin-top-20">
+				<p>
+					<label for="email" class="color">דואר אלקטרוני
+						<span class="required">
+							<i class="fa fa-asterisk"></i>
+						</span>
+					</label>
+				</p>
+				<p>
+					<input name="email" class="form-control">
+				</p>
+			</div>
+
+			<div class="col-md-6 col-sm-12 col-xs-12 margin-top-20">
+				<p><label for="phone" class="color">טלפון
+					<span class="required">
+						<i class="fa fa-asterisk"></i>
+					</span>
+				</label>
+				</p>
+				 <p>
+					<input name="phone" class="form-control">
+				 </p>
+			</div>
+
+				<div class="col-xs-12 margin-auto">
+				<p class="bottom-title">
+					למידע נוסף על מסלולי ההשקעה
+					<i class="fa fa-angle-left"></i>
+				</p>
+				</div>  
+			
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="tab">
+		<div class="row bg-white">
+			<div class="col-md-3 col-sm-12 col-xs-12 right-side">
+				<p class="sub-title">
+					אישור וסיכום
+				</p>
+			</div>
+			<div class="col-md-9 col-sm-12 col-xs-12 padding-0">
+				<div class="col-xs-12 border-bottom hidden-xs hidden-sm">
+					<div class="pull-right">
+					לאישור וסיכום התהליך אנא מלא את השדות הבאים:
+					</div>
+				</div>
+			
+				<div class="col-md-4 col-sm-12 col-xs-12 margin-top-20">
+					<p>
+						<label for="id" class="color">תעודת זהות
+							<span class="required"><i class="fa fa-asterisk"></i></span>
+						</label>
+					</p>
+					<p>
+						<input name="id" class="form-control">
+					</p>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12 margin-top-20">
+					<p>
+						<label for="card" class="color">מספר כרטיס אשראי
+							<span class="required">
+								<i class="fa fa-asterisk"></i>
+							</span>
+						</label>
+					</p>
+						<p>
+							<input name="card" class="form-control">
+						</p>
+					</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12 margin-top-20">
+					<p>
+						<label for="cv" class="color">3 ספרות בגב הכרטיס
+							<span class="required"><i class="fa fa-asterisk"></i></span>
+						</label>
+					</p>
+					<p>
+						<input name="cv" class="form-control">
+					</p>
+				</div>
+
+			<div class="col-xs-12 margin-auto">
+				<p class="bottom-title">
+					למידע נוסף על מסלולי ההשקעה <i class="fa fa-angle-left"></i>
+				</p>
+			</div>  
+			</div>
+		</div>
+	</div>
+		<div class="row buttons-area">
+			<div class="col-xs-12">
+				  <button type="button" id="prevBtn" onclick="nextPrev(-1)">הקודם</button>
+				  <button type="button" id="nextBtn" onclick="nextPrev(1)">המשך</button>
+			</div>
+		</div>
+	</form>
+	</div>
+	<script src="js/script.js"></script>
+	</body>
+</html>
