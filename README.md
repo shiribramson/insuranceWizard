@@ -1,2 +1,2 @@
 # insuranceWizard
-web application | Insurance Wizard 
+Fully responsive step by step insurance wizard. 
